@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>ToDo List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="body-card">
+        <header>
+         <span>To Do List</span>
+        </header>
+          <div class="tasks">
+        </div>
+          <div class="from">
+            <div class="input-container">
+              <input id="mainInput" class="main-input" type="text" placeholder="Here">
+           <label for="praiority">Priority</label>
+            <select id="praiority" class="secondary">
+              <option value="" disabled selected style="display: none;"></option> 
+              <option value="High" class="secondary">High</option>
+              <option value="Medium" class="secondary">Medium</option>
+              <option value="Low" class="secondary">Low</option>
+            </select>
+            <button id="addBtn" class="secondary btn">Add</button>
+         </div>
+         </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/603813b021.js" crossorigin="anonymous"></script>
+    <script src="./js.js"></script> 
+</body>
+</html>

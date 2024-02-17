@@ -1,0 +1,263 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e3e9ff;
+    font-family: 'Roboto', sans-serif;
+}
+
+label,
+.secondary.hidden {
+    display: none;
+}
+
+.container {
+    padding: 0 15px;
+    width: 80%;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+}
+
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.body-card header {
+    width: 100%;
+    height: 80px;
+    background-color: #b07dec;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.body-card header span {
+    color: white;
+    font-size: 38px;
+    width: auto;
+}
+
+/* Responsive Configurations */
+
+@media (max-width: 767px) {
+    .body-card {
+        justify-content: start;
+    }
+    .body-card header span {
+        font-size: 22px;
+    }
+}
+
+/*/*/
+
+.body-card .tasks {
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+    margin-top: 25px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.body-card .tasks .task {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.body-card .tasks .task p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.body-card .tasks .task i {
+    cursor: pointer;
+    font-size: 22px;
+    color: #b07dec;
+    padding: 15px 10px;
+}
+
+/* Hide checked box status */ 
+.body-card .tasks .task .checked {
+    display: none;
+}
+
+/* Responsive Configurations */
+
+@media (max-width: 767px) {
+    .body-card .tasks .task i {
+        padding: 8px 0 8px 0;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/*/*/
+
+.container .body-card .from {
+    transition-delay: 0.3s;
+    transition-duration: 0.3s;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    height: auto;
+}
+
+
+/* these styles made for menu chooses and the section parent */
+
+.menu-styles {
+    color: white;
+    background-color: #b07dec;
+    font-size: 18px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.section-styles {
+    display: flex;
+    background-color: #b07dec;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .section-styles {
+        flex-direction: column;
+    } 
+}
+
+
+.input-container {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    background: #b07dec;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+}
+
+
+.input-container .main-input {
+  width: 100%;
+  border: none;
+  background-color: #b07dec;
+  outline: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.input-container .main-input::placeholder {
+  color: white;
+  font-size: 22px;
+} 
+
+@media (max-width: 767px) {
+    .input-container .main-input {
+        font-size: 18px;
+    } 
+    .input-container .main-input::placeholder {
+    color: white;
+    font-size: 18px;
+    } 
+    .secondary-inputs {
+        padding: 0 2px;
+    }
+}
+
+.secondary,
+.secondary.hidden {
+    display: none;
+}
+
+.secondary-inputs {
+    background-color: transparent;
+    outline-style: none;
+    border-style: none;
+    color: white;
+    width: calc(60% / 3);
+}
+
+.btn.secondary-inputs {
+    cursor: pointer;
+}
+
+
+#praiority option {
+    color: black;
+}
+
+/* Style the calendar icon */
+.secondary-inputs::-webkit-calendar-picker-indicator {
+    filter: invert(100%); /* Change the color of the icon to white */
+}
+
+/* some configurations input form */ 
+::placeholder {
+  color: black;
+}
+
+/* Media query for smaller displays */
+@media screen and (max-width: 767px) {
+  #main-input::placeholder {
+    content: "+";
+  }
+  #starting-day::placeholder, #ending-day::placeholder {
+    content: "";
+  }
+}
+
+
+/* / */
